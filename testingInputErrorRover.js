@@ -1,5 +1,6 @@
-let executeFunction = require('./executeFunction.js');
+let executeFunction = require('./executionFunction.js');
 function landRover(grid, position, direction, pathCommand) {
+  //console.log(grid, position, direction, pathCommand);
   // grid error
   if(grid === undefined) {
     let error = 'The grid is undefined';
@@ -60,6 +61,7 @@ function landRover(grid, position, direction, pathCommand) {
     let error = 'The pathCommand is contains command other than [R, L, M]';
     return error;
   }  
-  executeFunction(grid, position, direction, pathCommand);
+  var result = executeFunction(grid, position, direction, pathCommand);
+  return result;
 }
 module.exports = landRover
